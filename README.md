@@ -13,7 +13,7 @@ To build and test the DFU detection algorithm follow the below steps:
  2. [Training](/2_Training/)
  	- Download pre-trained weights
  	- Train your custom YOLO model on annotated images 
- 3. [Inference](/3_Inference/)
+ 3. [Test](/3_Inference/)
  	- Detect objects in new images and videos
 
 ## Repo structure
@@ -84,7 +84,17 @@ The outputs are saved in [`/Data_New/Source_Images/Test_Image_Detection_Results`
 ## Full Start (Training and Inference)
 
 To train your own custom YOLO object detector please follow the instructions detailed bellow:
-- [`1_Image_Annotation`](/1_Image_Annotation/),
+- [`1_Image_Annotation`]
+	## Convert to YOLO Format
+	First, convert .csv format to the YOLOv3 format. To do so, run the conversion script:
+
+	```
+	python Convert_to_YOLO_format.py
+	```
+	The script generates two output files: [`data_train.txt`](/Data_New/Source_Images/Training_Images/vott-csv-export/data_train.txt) 	  located in the [`Data_New/Source_Images/Training_Images/vott-csv-export`](/Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](/Data_New/Model_Weights/data_classes.txt) located in the 						[`/Data_New/Model_Weights`](/Data_New/Model_Weights/) folder. To list available command line options run 
+	
+	`python Convert_to_YOLO_format.py -h`.
+
 - [`2_Training`](/2_Training/) and
 - [`3_Inference`](/3_Inference/).
  
