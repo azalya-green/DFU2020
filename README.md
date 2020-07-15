@@ -68,8 +68,8 @@ pip install -r requirements.txt
 ```
 If this fails, you may have to upgrade your pip version first with `pip install pip --upgrade`. If your system has working CUDA drivers, it will use your GPU automatically for training and inference.
 
-## Quick Start (Inference only)
-To test the cat face detector on test images located in [`Data_New/Source_Images/Test_Images`](/Data_New/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
+## Inference on previously trained Weights
+To test the DFU2020 on test images located in [`Data_New/Source_Images/Test_Images`](/Data_New/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
 
 ```
 python Test.py
