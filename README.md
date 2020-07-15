@@ -69,7 +69,7 @@ pip install -r requirements.txt
 If this fails, you may have to upgrade your pip version first with `pip install pip --upgrade`. If your system has working CUDA drivers, it will use your GPU automatically for training and inference.
 
 ## Inference on previously trained Weights
-To test the DFU2020 on test images located in [`Data_New/Source_Images/Test_Images`](/Data_New/Source_Images/Test_Images) run the `Minimal_Example.py` script in the root folder with:
+To test the DFU2020 on test images located in [`Data_New/Source_Images/Test_Images`](/Data_New/Source_Images/Test_Images) run the `Test.py` script in the root folder with:
 
 ```
 python Test.py
@@ -85,7 +85,9 @@ The outputs are saved in [`/Data_New/Source_Images/Test_Image_Detection_Results`
 
 To train your own custom YOLO object detector please follow the instructions detailed bellow:
 - [`1_Image_Annotation`]
-	First, convert .csv format to the YOLOv3 format. To do so, run the conversion script:
+	Add all the training images into (/Data_New/train_image_folder/), then add the training labels groundtruth.csv file into
+	(/Data_New/) and (/Data_New/VoTT/) folders
+	Then, to convert .csv format to the YOLOv3 format run the conversion script:
 
 	```
 	python Convert_.py
