@@ -85,7 +85,6 @@ The outputs are saved in [`/Data_New/Source_Images/Test_Image_Detection_Results`
 
 To train your own custom YOLO object detector please follow the instructions detailed bellow:
 - [`1_Image_Annotation`]
-	## Convert to YOLO Format
 	First, convert .csv format to the YOLOv3 format. To do so, run the conversion script:
 
 	```
