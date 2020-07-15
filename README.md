@@ -88,13 +88,11 @@ To train your own custom YOLO object detector please follow the instructions det
 	First, convert .csv format to the YOLOv3 format. To do so, run the conversion script:
 
 	```
-	python Convert_to_YOLO_format.py
+	python Convert_.py
 	```
-	The script generates two output files: [`data_train.txt`](/Data_New/Source_Images/Training_Images/vott-csv-export/data_train.txt) 	  located in the [`Data_New/Source_Images/Training_Images/vott-csv-export`](/Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](/Data_New/Model_Weights/data_classes.txt) located in the 						[`/Data_New/Model_Weights`](/Data_New/Model_Weights/) folder. To list available command line options run 
-	
-	`python Convert_to_YOLO_format.py -h`.
+	The script generates two output files: [`data_train.txt`](/Data_New/Source_Images/Training_Images/vott-csv-export/data_train.txt) 	  located in the [`Data_New/Source_Images/Training_Images/vott-csv-export`](/Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](/Data_New/Model_Weights/data_classes.txt) located in the 						[`/Data_New/Model_Weights`](/Data_New/Model_Weights/) folder. 
 
-- [`2_Training`](/2_Training/) and
+- [`2_Training`](/2_Training/) 
 - [`3_Inference`](/3_Inference/).
  
 **To make everything run smoothly it is highly recommended to keep the original folder structure of this repo!**
