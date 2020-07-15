@@ -17,10 +17,8 @@ To build and test the DFU detection algorithm follow the below steps:
  	- Detect objects in new images and videos
 
 ## Repo structure
-+ [`src`](/1_Image_Annotation/): Scripts and instructions on annotating images
-+ [`env`](/2_Training/): Scripts and instructions on training your YOLOv3 model
-+ [`3_Inference`](/3_Inference/): Scripts and instructions on testing your trained YOLO model on new images and videos
-+ [`Data`](/Data/): Input Data, Output Data, Model Weights and Results
++ [`src`](/src/): Keras implementation of YOLOv3
++ [`Data_New`](/Data_New/): Input Data, Output Data, Model Weights and Results
 + [`Utils`](/Utils/): Utility scripts used by main scripts
 
 ### Requisites
