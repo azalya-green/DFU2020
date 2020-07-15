@@ -56,7 +56,7 @@ from Train_Utils import (
 
 
 keras_path = os.path.join(src_path, "keras_yolo3")
-Data_Folder = os.path.join(get_parent_dir(1), "Data_New")
+Data_Folder = os.path.join(get_parent_dir(0), "Data_New")
 Image_Folder = os.path.join(Data_Folder, "train_image_folder")
 VoTT_Folder = Data_Folder
 YOLO_filename = os.path.join(VoTT_Folder, "data_train.txt")
