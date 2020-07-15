@@ -1,3 +1,3 @@
-# Keras YOLOv3
+# TrainYourOwnYolo
 
-This part of the repo is a fork of [**qqwweee/keras-yolo3**](https://github.com/qqwweee/keras-yolo3): **A Keras implementation of YOLOv3 (Tensorflow backend)**.
+This part of the repo is a fork of [**AntonMu/TrainYourOwnYOLO**](https://github.com/AntonMu/TrainYourOwnYOLO): **A Keras implementation of YOLOv3 (Tensorflow backend)**.
