@@ -92,8 +92,27 @@ To train your own custom YOLO object detector please follow the instructions det
 	```
 	The script generates two output files: [`data_train.txt`](/Data_New/Source_Images/Training_Images/vott-csv-export/data_train.txt) 	  located in the [`Data_New/Source_Images/Training_Images/vott-csv-export`](/Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](/Data_New/Model_Weights/data_classes.txt) located in the 						[`/Data_New/Model_Weights`](/Data_New/Model_Weights/) folder. 
 
-- [`2_Training`](/2_Training/) 
-- [`3_Inference`](/3_Inference/).
+- [`2_Training`] 
+	Using the training images located in [`Data_New/Source_Images/Training_Images`](/Data_New/Source_Images/Training_Images) and the 	 annotation file [`data_train.txt`](/Data_New/Source_Images/Training_Images/vott-csv-export) which we have created in the [previous 	    step]we are now ready to train our YOLOv3 detector. 
+	#### Download and Convert Pre-Trained Weights
+	Before getting started download the pre-trained YOLOv3 weights and convert them to the keras format, these weights are originally 	  trained by AntonMu/TrainYourOwnYOLO:
+
+	```
+	python Download_and_Convert_YOLO_weights.py
+	```
+	To list available command line options run `python Download_and_Convert_YOLO_weights.py -h`.
+
+	The weights are pre-trained on the [ImageNet 1000 dataset](http://image-net.org/challenges/LSVRC/2015/index) and thus work well 	for object detection tasks that are very similar to the types of images and objects in the ImageNet 1000 dataset.
+
+	#### Train YOLOv3 Detector
+	To start the training, run the training script :
+	```
+	python Train_YOLO_DUF.py 
+	```
+	The final weights are saved in [`Data_New/Model_weights`](/Data/Model_weights). To list available command line options run 
+	`python Train_YOLO.py -h`.
+
+- [`3_Inference`]
  
 **To make everything run smoothly it is highly recommended to keep the original folder structure of this repo!**
 
