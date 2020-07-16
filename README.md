@@ -7,9 +7,8 @@ The backbone of our method is based on using the state-of-the-art YOLOv3 comput
 
 To build and test the DFU detection algorithm follow the below steps:
 
- 1. [Image Annotation](/1_Image_Annotation/)
-	 - Install Microsoft's Visual Object Tagging Tool (VoTT)
-	 - Annotate images
+ 1. [Transfer]
+	 - Transfers the annotations to yolo format
  2. [Training](/2_Training/)
  	- Download pre-trained weights
  	- Train your custom YOLO model on annotated images 
