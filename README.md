@@ -7,12 +7,12 @@ The backbone of our method is based on using the state-of-the-art YOLOv3 comput
 
 To build and test the DFU detection algorithm follow the below steps:
 
- 1. [Transfer]
+ 1. [Transfer](/Transfer/)
 	 - Transfers the annotations to yolo format
- 2. [Training](/2_Training/)
+ 2. [Training](/Training/)
  	- Download pre-trained weights
  	- Train your custom YOLO model on annotated images 
- 3. [Test](/3_Inference/)
+ 3. [Test](/Test/)
  	- Detect objects in new images and videos
 
 ## Repo structure
