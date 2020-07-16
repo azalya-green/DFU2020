@@ -79,6 +79,8 @@ The outputs are saved in [`/Data_New/Source_Images/Test_Image_Detection_Results`
  - [`Detection_Results.csv`](/Data_New/Source_Images/Test_Image_Detection_Results/Detection_Results.csv) file with file names and locations of bounding boxes.
 
  If you want to detect DFU in your own pictures, replace the DFU images in [`Data_New/Source_Images/Test_Images`](/Data_New/Source_Images/Test_Images) with your own images.
+ 
+ Then you need to run correct_overlap.R to remove bonding boxes with large overlap, the proccess favors the bonding box with higher score.
 
 ## Full Start (Training and Inference)
 
