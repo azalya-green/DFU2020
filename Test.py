@@ -22,7 +22,7 @@ output_folder = os.path.join(image_folder, "Test_Image_Detection_Results")
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
 
-# Now run the cat face detector
+# Now run the DFU detector
 detector_script = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "Detect_.py"
 )
