@@ -14,6 +14,7 @@ To build and test the DFU detection algorithm follow the below steps:
  	- Train your custom YOLO model on annotated images 
  3. [Test](/Test/)
  	- Detect objects in new images and videos
+	- Removing Bonding boxes with big overlap (optional)
 
 ## Repo structure
 + [`src`](/src/): Keras implementation of YOLOv3
@@ -74,10 +75,10 @@ python Test.py
 ```
 
 The outputs are saved in [`/Data_New/Source_Images/Test_Image_Detection_Results`](/Data_New/Source_Images/Test_Image_Detection_Results). This includes:
- - Cat pictures with bounding boxes around faces with confidence scores and
+ - DFU pictures with bounding boxes around Ulcers with confidence scores and
  - [`Detection_Results.csv`](/Data_New/Source_Images/Test_Image_Detection_Results/Detection_Results.csv) file with file names and locations of bounding boxes.
 
- If you want to detect cat faces in your own pictures, replace the cat images in [`Data_New/Source_Images/Test_Images`](/Data_New/Source_Images/Test_Images) with your own images.
+ If you want to detect DFU in your own pictures, replace the DFU images in [`Data_New/Source_Images/Test_Images`](/Data_New/Source_Images/Test_Images) with your own images.
 
 ## Full Start (Training and Inference)
 
