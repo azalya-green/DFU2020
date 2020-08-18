@@ -87,11 +87,12 @@ The outputs are saved in [`/Data_New/Source_Images/Test_Image_Detection_Results`
 
 To train your own custom YOLO object detector please follow the instructions detailed bellow:
 - [`1_Image_Annotation`]
-	Add all the training images into (/Data_New/VoTT/), then add the training labels groundtruth.csv file into
-	(/Data_New/) and (/Data_New/VoTT/) folders
+	Add all the training images into (./Data_New/VoTT/), then add the training labels groundtruth.csv file into
+	(./Data_New/) folders
 	Then, to convert .csv format to the YOLOv3 format run the conversion script:
 
-	```
+	``` 
+	R CMD BATCH --no-save convert_ground.R 
 	python Convert_.py
 	```
 	The script generates two output files: [`data_train.txt`](/Data_New/Source_Images/Training_Images/vott-csv-export/data_train.txt) 	  located in the [`Data_New/Source_Images/Training_Images/vott-csv-export`](/Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](/Data_New/Model_Weights/data_classes.txt) located in the 						[`/Data_New/Model_Weights`](/Data_New/Model_Weights/) folder. 
