@@ -19,7 +19,7 @@ def get_parent_dir(n=1):
 sys.path.append(os.path.join(get_parent_dir(0), "Utils"))
 from Convert_Format import convert_vott_csv_to_yolo
 
-Data_Folder = os.path.join(get_parent_dir(0), "Data_new")
+Data_Folder = os.path.join(get_parent_dir(0), "Data_New")
 VoTT_Folder = os.path.join(
     Data_Folder, "VoTT"
 )

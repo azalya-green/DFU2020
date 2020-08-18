@@ -32,7 +32,7 @@ import random
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 # Set up folder names for default values
-data_folder = os.path.join(get_parent_dir(n=1), "Data_new")
+data_folder = os.path.join(get_parent_dir(n=1), "Data_New")
 
 image_folder = os.path.join(data_folder, "Source_Images")
 

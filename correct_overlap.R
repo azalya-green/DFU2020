@@ -2,7 +2,10 @@ options(stringsAsFactors=FALSE)
 
 source("per_over.R")
 
-x <- read.csv("new_Detection_Results.csv")
+infile <- file.path("Data_New","Source_Images","Test_Image_Detection_Results","Detection_Results.csv")
+x <- read.csv(infile)
+outfile <- file.path("Data_New","Source_Images","Test_Image_Detection_Results","Detection_Results_corrected.csv")
+
 bad <- numeric()
 z <- x[1:2,]
 nc <- ncol(x)
@@ -20,6 +23,6 @@ for (im in twos) {
 	z <- rbind(z,x[ind,])
 }
 
-write.csv(x[-bad,],"corrected_Testing_Detections.csv",quote=FALSE,row.names=FALSE)
+write.csv(x[-bad,],outfile,quote=FALSE,row.names=FALSE)
 z <- z[-(1:2),]
 write.csv(z,"processed_images.csv",quote=FALSE,row.names=FALSE)
