@@ -81,7 +81,11 @@ The outputs are saved in [`/Data_New/Source_Images/Test_Image_Detection_Results`
 
  If you want to detect DFU in your own pictures, replace the DFU images in [`Data_New/Source_Images/Test_Images`](/Data_New/Source_Images/Test_Images) with your own images.
  
- Then you need to run correct_overlap.R to remove bonding boxes with large overlap, the proccess favors the bonding box with higher score.
+ Then you need to run 
+ ```
+ R CMD BATCH --no-save correct_overlap.R 
+ ```
+ to remove bonding boxes with large overlap, the proccess favors the bonding box with higher score.
 
 ## Full Start (Training and Inference)
 
@@ -95,7 +99,7 @@ To train your own custom YOLO object detector please follow the instructions det
 	R CMD BATCH --no-save convert_ground.R 
 	python Convert_.py
 	```
-	The script generates two output files: [`data_train.txt`](/Data_New/Source_Images/Training_Images/vott-csv-export/data_train.txt) 	  located in the [`Data_New/Source_Images/Training_Images/vott-csv-export`](/Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](/Data_New/Model_Weights/data_classes.txt) located in the 						[`/Data_New/Model_Weights`](/Data_New/Model_Weights/) folder. 
+	The script generates two output files: [`data_train.txt`](./Data_New/VoTT/data_train.txt) 	  located in the [`Data_New/VoTT`](/Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](/Data_New/Model_Weights/data_classes.txt) located in the 						[`Data_New/Model_Weights`](Data_New/Model_Weights/) folder. 
 
 - [`2_Training`] 
 	Using the training images located in [`Data_New/Source_Images/VoTT`](/Data_New/Source_Images/Training_Images) and the 	 		annotation file [`data_train.txt`](/Data_New/Source_Images/VoTT/vott-csv-export) which we have created in the [previous step] 
