@@ -61,7 +61,8 @@ Make sure that, from now on, you **run all commands from within your virtual env
 Install all required packages with:
 
 ```
-pip install -r requirements.txt
+pip install -r requirements.txt 
+pip install tensorflow==1.15.2 
 ```
 If this fails, you may have to upgrade your pip version first with `pip install pip --upgrade`. If your system has working CUDA drivers, it will use your GPU automatically for training and inference.
 
