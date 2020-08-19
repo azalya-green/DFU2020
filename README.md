@@ -23,9 +23,11 @@ To build and test the DFU detection algorithm follow the below steps:
 
 ### Requisites
 The only hard requirement is a running version of python 3.6 or 3.7. To install python 3.7 go to 
-- [python.org/downloads](https://www.python.org/downloads/release/python-376/) 
+- [python.org/downloads](https://www.python.org/downloads/release/python-376/)  
 
 and follow the installation instructions. Note that this repo has only been tested with python 3.6 and python 3.7 thus it is recommened to use either `python3.6` or `python3.7`.
+
+You will also need R to be installed on your computer (for some helper functions).
 
 To speed up training, it is recommended to use a **GPU with CUDA** support. For example on [AWS](/2_Training/AWS/) you can use a `p2.xlarge` instance (Tesla K80 GPU with 12GB memory). Inference is very fast even on a CPU with approximately ~2 images per second. 
 
@@ -39,6 +41,8 @@ Clone this repo with:
 git clone https://github.com/azalya-green/DFU2020
 
 ```
+**From now on all the file and folder paths are relative to the folder to which you cloned the repository, so issue all the commands from there.**
+
 Create Virtual **(Linux/Mac)** Environment:
 ```
 python3 -m venv env
@@ -55,7 +59,7 @@ Create Virtual **(Windows)** Environment:
 py -m venv env
 .\env\Scripts\activate
 ```
-Make sure that, from now on, you **run all commands from within your virtual environment**.
+Make sure that, from now on, you **run all commands from within your virtual environment**. 
 
 #### 2 Install Required Packages [Windows, Mac or Linux]
 Install all required packages with:
@@ -75,7 +79,7 @@ and add that to ['Data_New/Model_Weights'] folder, then run the `Test.py` script
 python Test.py
 ```
 
-The outputs are saved in [`/Data_New/Source_Images/Test_Image_Detection_Results`](/Data_New/Source_Images/Test_Image_Detection_Results). This includes:
+The outputs are saved in [`Data_New/Source_Images/Test_Image_Detection_Results`](./Data_New/Source_Images/Test_Image_Detection_Results). This includes:
  - DFU pictures with bounding boxes around Ulcers with confidence scores and
  - [`Detection_Results.csv`](/Data_New/Source_Images/Test_Image_Detection_Results/Detection_Results.csv) file with file names and locations of bounding boxes.
 
@@ -99,10 +103,10 @@ To train your own custom YOLO object detector please follow the instructions det
 	R CMD BATCH --no-save convert_ground.R 
 	python Convert_.py
 	```
-	The script generates two output files: [`data_train.txt`](./Data_New/VoTT/data_train.txt) 	  located in the [`Data_New/VoTT`](/Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](/Data_New/Model_Weights/data_classes.txt) located in the 						[`Data_New/Model_Weights`](Data_New/Model_Weights/) folder. 
+	The script generates two output files: [`data_train.txt`](./Data_New/VoTT/data_train.txt) 	  located in the [`Data_New/VoTT`](./Data_New/Source_Images/Training_Images/vott-csv-export) 	     folder and [`data_classes.txt`](./Data_New/Model_Weights/data_classes.txt) located in the 						[`Data_New/Model_Weights`](Data_New/Model_Weights/) folder. 
 
 - [`2_Training`] 
-	Using the training images located in [`Data_New/Source_Images/VoTT`](/Data_New/Source_Images/Training_Images) and the 	 		annotation file [`data_train.txt`](/Data_New/Source_Images/VoTT/vott-csv-export) which we have created in the [previous step] 
+	Using the training images located in [`Data_New/Source_Images/VoTT`](./Data_New/Source_Images/Training_Images) and the 	 		annotation file [`data_train.txt`](./Data_New/Source_Images/VoTT/vott-csv-export) which we have created in the [previous step] 
 	we are now ready to train our YOLOv3 detector. 
 	#### Download and Convert Pre-Trained Weights
 	Before getting started download the pre-trained YOLOv3 weights and convert them to the keras format, these weights are originally 	  trained by AntonMu/TrainYourOwnYOLO:
@@ -119,7 +123,7 @@ To train your own custom YOLO object detector please follow the instructions det
 	```
 	python Train_YOLO_DUF.py 
 	```
-	The final weights are saved in [`Data_New/Model_weights`](/Data/Model_weights). To list available command line options run 
+	The final weights are saved in [`Data_New/Model_weights`](./Data/Model_weights). To list available command line options run 
 	`python Train_YOLO.py -h`.
 
 - [`3_Inference`]
