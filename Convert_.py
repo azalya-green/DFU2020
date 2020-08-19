@@ -24,7 +24,8 @@ VoTT_Folder = os.path.join(
     Data_Folder, "VoTT"
 )
 VoTT_csv = os.path.join(VoTT_Folder, "groundtruth.csv")
-YOLO_filename = os.path.join(VoTT_Folder, "data_train.txt")
+#YOLO_filename = os.path.join(VoTT_Folder, "data_train.txt")
+YOLO_filename = os.path.join(Data_Folder, "data_train.txt")
 
 model_folder = os.path.join(Data_Folder, "Model_Weights")
 classes_filename = os.path.join(model_folder, "data_classes.txt")
@@ -76,5 +77,5 @@ if __name__ == "__main__":
     # Sort Dict by Values
     SortedLabelDict = sorted(labeldict.items(), key=lambda x: x[1])
     for elem in SortedLabelDict:
-        file.write(elem[0] + "\n")
+        file.write(str(elem[0]) + "\n")
     file.close()

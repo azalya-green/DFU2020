@@ -9,7 +9,7 @@ x <- read.csv(infile)
 nams <- colnames(x)
 nams[1] <- "image"
 nams <- c("label",nams)
-x <- cbind("u",x)
+x <- cbind(0,x)
 colnames(x) <- nams
 write.csv(x,outfile1,quote=FALSE,row.names=FALSE)
 write.csv(x,outfile2,quote=FALSE,row.names=FALSE)
