@@ -90,6 +90,8 @@ The outputs are saved in [`Data_New/Source_Images/Test_Image_Detection_Results`]
  R CMD BATCH --no-save correct_overlap.R 
  ```
  to remove bonding boxes with large overlap, the proccess favors the bonding box with higher score.
+ 
+ This will create **Detection_Results_corrected.csv** file in **Data_New/Source_Images/Test_Image_Detection_Results** folder.
 
 ## Full Start (Training and Inference)
 
